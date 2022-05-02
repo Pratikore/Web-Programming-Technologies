@@ -1,0 +1,29 @@
+[
+    {
+        "bookId" :1,
+        "name" : "TheWonders",
+        "author" : "Ken Thomson",
+        "price" : 1000
+    },
+
+    {
+        "bookId" :1,
+        "name" : "Let us Code..",
+        "author" : "Rob Jhonson",
+        "price" : 1000
+    },
+
+    {
+        "bookId" :2,
+        "name" : "TheWonders-II",
+        "author" : "Ken Thomson",
+        "price" : 1000
+    },
+
+    {
+        "bookId" :3,
+        "name" : "TheWonders-III",
+        "author" : "Ken Thomson",
+        "price" : 1000
+    }
+]
