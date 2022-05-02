@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style>
+            span {color : red}
+        </style>
+        <script>
+
+            function showdata(){
+                    var id =document.getElementById("id").value
+                    var name =document.getElementById("name").value
+                    var date =document.getElementById("date").value
+                    var sdate =document.getElementById("sdate").value
+                    var orders =document.getElementById("order").value
+					
+                    document.getElementById("s5").innerHTML="Order Id : "+id;
+                    document.getElementById("s6").innerHTML="Cust Name : "+name;
+                    document.getElementById("s7").innerHTML="Billing Date : "+date;
+                    document.getElementById("s8").innerHTML="Shipping Date: "+sdate;
+                    document.getElementById("s9").innerHTML="Order total: "+orders;
+               
+            }
+
+            function validate(){
+                var name= document.getElementById("name").value
+
+				if (name.length< 5){
+                    document.getElementById("s1").innerHTML = "Name cannot be less than 5 charecters";
+					document.getElementById("name").focus(); 
+					document.getElementById("name").select(); 
+                }
+
+                else
+				document.getElementById("uname").innerHTML = "";
+				
+                var date=document.getElementById("date").value
+                var sdate=document.getElementById("sdate").value
+                
+                if(date>sdate){
+                    document.getElementById("s2").innerHTML="Billing date cannot ne greater than Shipping date!"
+                    document.getElementById("date").focus(); 
+					document.getElementById("date").select();
+                }
+				
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset style="border-color:aqua">
+            <form>
+                
+                Order Id : <input type="number" id= "id" required><br>
+                Cust Name : <input id="name" required onchange="validate()"><span id="s1"></span><br>
+                Enter Billing Date : <input type="date" id="date" required onchange="validate()"><span id="s2"></span><br>
+                Enter Shipping Date : <input type = "date" id="sdate" required><br>
+                Order Total : <input type = "number" id= "order" required><br>
+                <input type="button" value="display" onclick ="showdata()">
+                
+                <br><span id="s5"></span><br>
+                <span id="s6"></span><br>
+                <span id="s7"></span><br>
+                <span id="s8"></span><br>
+                <span id="s9"></span><br>
+
+            </form>
+        </fiedslet>
+    </body>
+</html>

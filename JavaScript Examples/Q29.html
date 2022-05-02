@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            function cal(){
+                var loan=parseInt(document.getElementById("l").value)
+                var rate=parseInt(document.getElementById("r").value)
+                var number=parseInt(document.getElementById("n").value)
+                
+                document.getElementById("s1").innerHTML=((loan*rate*number/100)+loan)/(number*12);
+                document.getElementById("s2").innerHTML=((loan*rate*number/100)+loan);
+                document.getElementById("s3").innerHTML=(loan*rate*number/100);
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset style="border-color : aqua">
+            <h3>Enter Loan Amount</h3>
+            1)Amount of the loan : &nbsp <input type="number" max=1500000 id="l"><br>
+            2)Annual percentage Rate of Interest : &nbsp <input type="number" id="r"><br>
+            3)Repayment period in years : &nbsp <input type="number" min=7 max=15 id="n"><br>
+            <input type="button" value="compute" onclick="cal()"><br><h3>Payment Information</h3>
+            4)Your monthly payment will be : &nbsp <span id="s1"><input type="number" readonly></span><br>
+            5)Your total payment will be : &nbsp <span id="s2"><input type="number" readonly ></span><br>
+            4)Your total interest payment will be : &nbsp <span id="s3"><input type="number" readonly></span><br>
+</html>

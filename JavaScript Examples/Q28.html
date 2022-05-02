@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            function readArray(arr){
+            for(i=0;i<=4;i++){
+            var name= arr[i]
+            document.getElementById(i).innerHTML=name;
+        }
+    }
+        </script>
+    </head>
+    <body>
+        <h3>Members of My Group Are :</h3>
+        <ol id="list"></ol>
+        <li><span id="0"></span></li>
+        <li><span id="1"></span></li>
+        <li><span id="2"></span></li>
+        <li><span id="3"></span></li>
+        <li><span id="4"></span></li>
+        <script>
+            var arr=["jhon","steve","ben","demon","Ian"]
+            readArray(arr);
+        </script>
+    </body>
+</html>

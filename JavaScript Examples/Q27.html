@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            function showNames(){
+                var arr= new Array();
+                for(i=0;i<=3;i++)
+                    arr.push=document.getElementById(i).value;
+
+                arr=arr.toUpperCase();
+                document.getElementById("s1").innerHTML=arr.join(",");
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            Enter names :<br>
+            <input id="0"><br>
+            <input id="1"><br>
+            <input id="2"><br>
+            <input id="3"><br>
+            <input type="button" onclick="showNames()" value="ShowNames"><br>
+            Members of my Group are :<br>
+            <span id="s1"></span>
+        </form>
+    </body>
+</html>

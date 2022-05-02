@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <script>
+            function showData(){
+                   var name=document.getElementById("name").value
+                   var date=document.getElementById("date").value
+                   var email=document.getElementById("email").value
+                   var gender=document.getElementById("gender").value
+                   var number=document.getElementById("number").value
+                  // var food=document.getElementById("food").value
+            
+                    document.getElementById("s1").innerHTML=name;
+                    document.getElementById("s2").innerHTML=date;
+                    document.getElementById("s3").innerHTML=email;
+                    document.getElementById("s4").innerHTML=gender;
+                    document.getElementById("s5").innerHTML=number;
+                    document.getElementById("s6").innerHTML=food;
+            
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset style="border-color : aqua">
+            <table>
+                <tr>
+                    <td>Name :</td>
+                    <td><input id="name"></td>
+                </tr>
+
+                <tr>
+                    <td>Birth Date</td>
+                    <td><select id="date">
+                        <option>January</option>
+                        <option>Feb</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>Augest</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>&nbsp
+                    <input type="Number" min=1 max=31>&nbsp
+                    <input type="Number" min=1 max=31></td>
+                </tr>
+
+                <tr>
+                    <td>Email Address : </td>
+                    <td><input type="email" id="email"> &nbsp&nbsp&nbsp&nbsp (Use format name@company.com)</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" valign="top">Gender :</td>
+                    <td><input type="radio" id="gender" name="gender">Male<br>
+                    <input type="radio"  id="female" name="gender"> Female</td>
+                </tr>
+
+                <tr>
+                    <td>Lucky Number :</td>
+                    <td><input type="number" id="number"> &nbsp&nbsp&nbsp&nbsp (Anumber between 1 and 100)</td>
+                </tr>
+                
+                <tr>
+                    <td>Favorite Foods :</td>
+                    <td>
+                        <input type="checkbox"> Pizza
+                        <input type="checkbox"> Pasta
+                        <input type="checkbox">Chinese
+                    </td>
+                </tr>
+            </table>
+            <input type="button" value="Send data" onclick="showData()"><br>
+
+            You entered :<br>
+            Name : <span id="s1"></span><br>
+            Birth Date : <span id="s2"></span><br>
+            Email Address : <span id="s3"></span><br>
+            Gender : <span id="s4"></span><br>
+            Lucky Number : <span id="s5"></span><br>
+            Favorite Food : <span id="s6"></span><br>
+        
+        </fieldset>
+
+    </body>
+</html>
